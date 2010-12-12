@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: TAAR.aux
+A level-1 auxiliary file: kata_pengantar.aux
+A level-1 auxiliary file: pendahuluan.aux
+A level-1 auxiliary file: bab_2.aux
+A level-1 auxiliary file: bab_3.aux
+A level-1 auxiliary file: bab_4.aux
+A level-1 auxiliary file: bab_5.aux
+The style file: ieeetr.bst
+A level-1 auxiliary file: lampiran.aux
+Database file #1: daftarpustaka.bib
+Warning--empty publisher in Craig
+Warning--empty year in Craig
+You've used 17 entries,
+            1876 wiz_defined-function locations,
+            596 strings with 6185 characters,
+and the built_in function-call counts, 4300 in all, are:
+= -- 406
+> -- 174
+< -- 0
++ -- 64
+- -- 47
+* -- 275
+:= -- 591
+add.period$ -- 21
+call.type$ -- 17
+change.case$ -- 13
+chr.to.int$ -- 0
+cite$ -- 19
+duplicate$ -- 230
+empty$ -- 438
+format.name$ -- 47
+if$ -- 1068
+int.to.chr$ -- 0
+int.to.str$ -- 17
+missing$ -- 21
+newline$ -- 59
+num.names$ -- 19
+pop$ -- 87
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 158
+stack$ -- 0
+substring$ -- 226
+swap$ -- 89
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 2
+while$ -- 38
+width$ -- 19
+write$ -- 154
+(There were 2 warnings)

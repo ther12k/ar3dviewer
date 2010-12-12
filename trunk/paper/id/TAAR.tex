@@ -1,0 +1,348 @@
+\documentclass[12pt,a4paper,pdftex,final,oneside,titlepage]{book}
+\usepackage[pdftex]{graphicx,color}
+\usepackage{graphicx}
+\usepackage[left=4cm,top=3cm,right=3cm,bottom=3cm,includeheadfoot]{geometry} %untuk mengatur margin
+\usepackage[pdftex]{hyperref}
+\usepackage{lscape}
+%\begin{landscape} untuk awal landsacpe
+%landscape content
+%\end{landscape} untuk akhir landscape
+\usepackage{longtable}
+\usepackage{setspace} %untuk mengatur spasi, pilihan: \doublespacing \singlespacing atau \onehalfspacing   
+\usepackage[bahasa]{babel}
+\selectlanguage{bahasa}
+\usepackage{fancyhdr,lastpage}
+%\usepackage[Lenny]{fncychap}
+%\usepackage[Sonny]{fncychap}
+\usepackage{pstricks}
+\usepackage{listings} %listing program
+\usepackage{appendix}
+\usepackage{subfig} %sub figure
+\usepackage{sidecap} %side caption
+\usepackage{ulem} %striketrough
+
+%==========================================================================================================
+% Bagian konfigurasi listing code
+%========================================================================================================== 
+
+% Colors used by Flex Builder 3.
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+\definecolor{flexred}{rgb}{0.65, 0.01, 0.01}
+\definecolor{flexgreen}{rgb}{0, 0.6, 0}
+\definecolor{flexgray}{rgb}{0.25, 0.37, 0.75}
+\definecolor{flexblue}{rgb}{0, 0.2, 1}
+\definecolor{flexfunction}{rgb}{0.2, 0.6, 0.4}
+\definecolor{flexvar}{rgb}{0.4, 0.6, 0.8}
+\definecolor{light-gray}{gray}{0.93}
+
+% Define new language for listings.
+\lstdefinelanguage{ActionScript} {
+	basicstyle=\ttfamily\scriptsize,
+	sensitive=true,
+	morecomment=[l][\color{flexgreen}\ttfamily]{//},
+	morecomment=[s][\color{flexgreen}\ttfamily]{/*}{*/},
+	morecomment=[s][\color{flexgray}\ttfamily]{/**}{*/},
+	morestring=[b]",
+	stringstyle=\color{flexred}\textbf,
+	commentstyle=\color{flexgreen},
+	showstringspaces=false,
+	numberstyle=\scriptsize,
+	numberblanklines=true,
+	showspaces=false,
+	breaklines=true,
+	showtabs=false,
+	xleftmargin=17pt,
+    framexleftmargin=17pt,
+    framexrightmargin=5pt,
+    framexbottommargin=4pt,
+    backgroundcolor=\color{light-gray},
+	emph =
+	{[1]
+		class, package, interface
+	},
+	emphstyle={[1]\color{purple}\textbf},
+	emph =
+	{[2]
+		internal, public, protected, private,
+		super, this, import, new, extends, implements,
+		void, true, false, as
+	},
+	emphstyle={[2]\color{flexblue}\textbf},
+	emph =
+	{[3]
+		function
+	},
+	emphstyle={[3]\color{flexfunction}\textbf},
+	emph =
+	{[4]
+		var
+	},
+	emphstyle={[4]\color{flexvar}\textbf}
+}
+
+% Define new language for listings.
+\lstdefinelanguage{MXML} {
+   basicstyle=\ttfamily\scriptsize,
+   sensitive=true,
+   morecomment=[s][\color{flexred}\ttfamily]{<!--}{-->}, commentstyle=\color{flexred},
+   morecomment=[s][\color{black}]{<?}{?>}, commentstyle=\color{black},
+%  morecomment=[n][\color{black}]{\{}{\}}, commentstyle=\color{black},
+   string=[b]", stringstyle=\color{flexred},
+   morestring=[b]', stringstyle=\color{flexred},
+   showstringspaces=false,
+   numberstyle=\scriptsize,
+   numberblanklines=true,
+   showspaces=false,
+   breaklines=true,
+   showtabs=false,
+   alsoletter={:},
+   keywords = [1]
+   {
+      mx:WindowedApplication, mx:Application, mx:Button, mx:Text,
+      mx:HBox, mx:VBox
+   },
+   keywordstyle={[1]\color{flexblue}},
+%  otherkeywords={<,>,/>,</},
+   keywords = [2]
+   {
+      mx:Script
+   },
+   keywordstyle={[2]\color{flexgreen}},
+}
+
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+
+
+%\makeatletter
+%\newcommand\appendix@chapter[1]{%
+%  \refstepcounter{chapter}%
+%  %\orig@chapter*{Lampiran \@Alph\c@chapter #1}%
+%  \addcontentsline{toc}{chapter}{Lampiran \@Alph\c@chapter: #1}%
+%}
+%\g@addto@macro\appendix{\let\chapter\appendix@chapter}
+%\makeatother
+%
+%\makeatletter
+%\newcommand\appendix@section[1]{%
+%  \refstepcounter{section}%
+%  \addcontentsline{toc}{section}{\@Alph\c@section: #1}%
+%}
+%\makeatother
+
+
+%==========================================================================================================
+% Bagian input data untuk keterangan file PDF yang dihasilkan
+%========================================================================================================== 
+\pdfinfo{
+/Author (Rizky Zulkarnaen)
+/CreationDate (D:20100602300000) % D:YYYYMMDDhhmmss (diisi dengan tanggal pembuatan skripsi)
+/ModDate (D:20100602300000) % diisi dengan tanggal modifikasi skripsi
+/Creator (LaTeX)
+/Producer (pdfLaTeX)
+/Title (TA_AR) % diisi dengan nama file skripsi
+/Subject (Perancangan Aplikasi Viewer Model 3D Interaktif Berbasis Web dengan Teknologi Augmented Reality) % diisi dengan judul skripsi
+/Keywords (augmented reality, computer vision, 3D) % diisi dengan kata-kata kunci isi skripsi
+}
+
+%==========================================================================================================
+% Bagian pengaturan hyperref
+%========================================================================================================== 
+\hypersetup{
+pdftitle={Perancangan Aplikasi Viewer Model 3D Interaktif Berbasis Web dengan Teknologi Augmented Reality}, % diisi dengan judul akhir skripsi
+pdfauthor={Rizky Zulkarnaen}, % diisi dengan nama penulis skripsi
+pdfkeywords={augmented reality computer vision 3D}, % diisi dengan kata-kata kunci dari isi skripsi
+bookmarksnumbered,
+pdfstartview={FitH},
+	citecolor = black,
+	linkcolor=black,
+  colorlinks
+}
+
+%==========================================================================================================
+% Koleksi pemenggalan kata, isi bagian ini bisa ditambah jika Anda mendapati kata yang salah pemenggalannya 
+%==========================================================================================================
+\hyphenation{HTTP}
+\hyphenation{client}
+\hyphenation{dengan}
+\hyphenation{header}
+\hyphenation{lingkung-an}
+\hyphenation{di-mung-kin-kan}
+\hyphenation{trans-pa-ran}
+\hyphenation{gen-era-tor}
+\hyphenation{apli-kasi}
+\hyphenation{me-nam-pil-kan}
+\hyphenation{di-tamb-bah-kan}
+\hyphenation{ber-da-sar-kan}
+\hyphenation{da-pat}
+\hyphenation{nya-ta}
+\hyphenation{ge-ne-ra-tor}
+\hyphenation{sua-tu}
+\hyphenation{pe-ran-cang-an}
+\hyphenation{di-tam-bah-kan}
+\hyphenation{ci-tra}
+\hyphenation{ka-li-be-ra-si}
+\hyphenation{ber-dam-ping-an}
+\hyphenation{FLAR-ToolKit}
+\hyphenation{di-sa-ji-kan}
+\hyphenation{mar-ker}
+\hyphenation{di-ki-rim}
+\hyphenation{me-nga-tur}
+\hyphenation{ka-rak-ter-istik}
+%==========================================================================================================
+% Bagian pengaturan paragraf 
+%==========================================================================================================
+\setlength{\parindent}{0pt} % jika awal paragraf ingin dibuat menjorok ke dalam, ganti angka 0 nya. 
+\setlength{\parskip}{6pt plus1pt minus1pt}
+\newcommand{\marginal}[1]{\leavevmode\marginpar{\color{cyan}\footnotesize\raggedright#1\par}} 
+\onehalfspacing
+%==========================================================================================================
+% Bagian pengaturan Fancy Header
+%==========================================================================================================
+\setlength{\headheight}{15pt}
+
+%==========================================================================================================
+% BAGIAN ISI DOKUMEN 
+%==========================================================================================================
+\begin{document}  
+
+%==========================================================================================================
+% Bagian pembuatan halaman judul 
+%==========================================================================================================
+\pagestyle{empty} 
+	\begin{titlepage} 
+		\begin{center} 
+		{\Large\textbf{Bahan Seminar Tugas Akhir}}\\
+		\par
+		\vspace{2cm}
+		\textbf{\Large Perancangan Aplikasi \textit{Viewer} Model 3D Interaktif Berbasis \textit{Web} dengan Teknologi \textit{Augmented Reality}} % diisi dengan judul skripsi
+		\vspace{0.5cm} \\
+		oleh :\\[0.4cm] 
+		{\large\underline{Rizky Zulkarnaen}}\\
+		$050402056$ \\% ganti NIM
+		\end{center}
+		
+		\par
+		\vfill
+		
+		\begin{figure}[h]
+			\begin{center}
+				\includegraphics[width=4.2cm]{./images/logoUSU} % isi dengan nama file logo
+			\end{center}
+        \end{figure}
+        
+        \vfill 
+        
+      \begin{center}
+      {\bf \large DEPARTEMEN TEKNIK ELEKTRO}\\[0.4cm] 
+      {\bf \large FAKULTAS TEKNIK}\\[0.4cm] 
+      {\bf \large UNIVERSITAS SUMATERA UTARA}\\[0.4cm] 
+      {\bf \large MEDAN}\\[0.4cm] 
+      {\bf \large 2010}
+      \end{center}
+      
+   \end{titlepage} 
+
+%==========================================================================================================
+% Bagian pembuatan halaman pengesahan skripsi 
+%==========================================================================================================
+\thispagestyle{empty} 
+\begin{center}{%\fontfamily{phv}\selectfont
+
+\textbf{\large Perancangan Aplikasi \textit{Viewer} Model 3D Interaktif Berbasis \textit{Web} dengan Teknologi \textit{Augmented Reality}}\\[1cm] 
+
+\par 
+\vspace{0.4cm} 
+oleh : 
+\\
+{\large\underline{Rizky Zulkarnaen}}\\ 
+$050402056$
+} 
+\vspace{1.4cm} 
+
+Tugas Akhir ini diajukan untuk melengkapi salah satu syarat untuk memperoleh gelar Sarjana Teknik\\[0.2cm] 
+
+Disetujui oleh :\\ 
+Pembimbing\\[2.2cm] 
+\textbf{\bfseries \underline{Ori Novanda, MT}}\\[0.2cm] 
+NIP:1972.1114.2003.121001\\[0.4cm]
+Diketahui oleh :\\ 
+Pelaksana Harian Ketua Departemen Teknik Elektro\\[2.2cm] 
+\textbf{\bfseries \underline{Prof. Dr. Ir. Usman S. Baafai}}\\[0.2cm] 
+NIP:1946.1022.1973.02001\\ 
+
+\end{center} 
+%========================================================================================================== 
+% Bagian pengaturan header dan footer
+%========================================================================================================== 
+\pagestyle{fancy}
+\lhead{} \chead{} \rhead{\thepage}
+\lfoot{} \cfoot{} \rfoot{}
+\renewcommand\headrulewidth{0pt}
+\renewcommand\footrulewidth{0pt}
+
+%==========================================================================================================
+% ISI SKRIPSI 
+%==========================================================================================================
+\pagenumbering{roman}
+\setcounter{tocdepth}{5} 
+\setcounter{secnumdepth}{3} %ditambahkan agar perintah \subsubsection memiliki angka
+
+%==========================================================================================================
+%ABSTRAK
+%==========================================================================================================
+
+\chapter*{\centering Abstrak}
+\thispagestyle{empty}
+\addcontentsline{toc}{chapter}{Abstrak}
+Dewasa ini, representasi model tiga dimensi (3D) virtual pada komputer sangat populer. Pemodelan model 3D virtual tersebut memerlukan interaksi yang baik dengan pengguna untuk mendapatkan sudut pandang yang jelas dari objek tersebut. Beberapa \textit{software} pemodelan 3D menggunakan \textit{pointer} seperti \textit{keyboard} ataupun \textit{mouse} yang dirasakan masih kurang dalam memberikan derajat kebebasan sudut pandang dari model 3D tersebut. Aplikasi ini dapat menampilkan model 3D virtual dan dapat diakses dengan mudah dari mana saja menggunakan \textit{web browser} tanpa perlu instalasi aplikasinya. Dengan menerapkan teknologi \textit{Augmented Reality}, model 3D dapat disajikan dengan lebih interaktif. Objek di dunia nyata dapat digunakan sebagai \textit{tracker} untuk keperluan interaksi model 3D, sehingga memudahkan dalam menampilkan model 3D tersebut. Hasil pengujian menunjukkan aplikasi dapat menampilkan model 3D yang sederhana dengan baik dalam nilai FPS (\textit{Framerate per Second}) yang mencukupi. Untuk model 3D yang sangat kompleks, aplikasi tidak dapat menampilkannya dengan baik karena keterbatasan aplikasinya yang berbasis \textit{web}.
+
+%Today, it has become very popular to represent 3D CG models onto the screen of a workstation or personal computer. In almost all software that displays 3D models, users can control their viewpoint of projection with pointing devices such as a mouse or trackball. However it is not intuitive to control the viewpoint with such devices, because there is an insufficient degree of freedom. Although locating viewpoint needs 6 degrees of freedom (3 degrees in position, and 3 degrees in direction), off-the-shelf pointing devices are basically two-dimensional controllers. We propose a 3D model viewer with a real-time marker tracking system. This system provides an easy method to make observations of 3D models from any direction and to any scale that users may choose. 
+
+\vspace*{2cm}
+
+\textbf{Kata Kunci : \textit{augmented reality}, \textit{computer vision}, \textit{3D model viewer}, \textit{Rich Internet Applications}}
+
+%==========================================================================================================
+% AWAL KATA PENGANTAR  
+%==========================================================================================================
+\include{kata_pengantar}
+%==========================================================================================================
+% AKHIR KATA PENGANTAR 
+%==========================================================================================================
+
+\clearpage
+\addcontentsline{toc}{chapter}{Daftar Isi} 
+\tableofcontents  %perintah untuk menampilkan daftar isi
+
+\clearpage
+\addcontentsline{toc}{chapter}{Daftar Tabel} 
+\listoftables %perintah untuk menampilkan daftar tabel 
+
+\clearpage
+\addcontentsline{toc}{chapter}{Daftar Gambar} 
+\listoffigures %perintah untuk menampilkan daftar gambar  
+
+%==========================================================================================================
+%Penulisan BAB di file yang berbeda
+%==========================================================================================================
+\include{pendahuluan}
+\include{bab_2}
+\include{bab_3}
+\include{bab_4}
+\include{bab_5}
+
+%==========================================================================================================
+% Bagian daftar pustaka 
+%==========================================================================================================
+\nocite{*}
+\renewcommand{\bibname}{Daftar Pustaka}
+\bibliographystyle{ieeetr} 
+\bibliography{daftarpustaka}
+\addcontentsline{toc}{chapter}{Daftar Pustaka} 
+
+\include{lampiran}
+
+\end{document}
+

@@ -1,0 +1,67 @@
+\select@language {bahasa}
+\select@language {bahasa}
+\contentsline {chapter}{Abstrak}{ii}{chapter*.2}
+\contentsline {chapter}{Kata Pengantar}{iii}{chapter*.3}
+\contentsline {chapter}{Daftar Isi}{v}{Item.8}
+\contentsline {chapter}{Daftar Tabel}{viii}{chapter*.4}
+\contentsline {chapter}{Daftar Gambar}{ix}{chapter*.5}
+\contentsline {chapter}{\numberline {1}PENDAHULUAN}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Latar Belakang}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Tujuan Penulisan}{2}{section.1.2}
+\contentsline {section}{\numberline {1.3}Rumusan Masalah}{3}{section.1.3}
+\contentsline {section}{\numberline {1.4}Batasan Masalah}{3}{section.1.4}
+\contentsline {section}{\numberline {1.5}Metodologi Penulisan}{4}{section.1.5}
+\contentsline {section}{\numberline {1.6}Sistematika Penulisan}{4}{section.1.6}
+\contentsline {chapter}{\numberline {2}DASAR TEORI}{6}{chapter.2}
+\contentsline {section}{\numberline {2.1}\textit {Augmented Reality}}{6}{section.2.1}
+\contentsline {section}{\numberline {2.2}\textit {Mixed Reality}}{7}{section.2.2}
+\contentsline {section}{\numberline {2.3}Teknik Display \textit {Augmented Reality}}{8}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}\textit {Head-Attached Display}}{9}{subsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.1.1}\textit {Head-Mounted Display}}{9}{subsubsection.2.3.1.1}
+\contentsline {subsubsection}{\numberline {2.3.1.2}\textit {Head-Mounted Projectors}}{11}{subsubsection.2.3.1.2}
+\contentsline {subsubsection}{\numberline {2.3.1.3}\textit {Virtual Retina Display}}{12}{subsubsection.2.3.1.3}
+\contentsline {subsection}{\numberline {2.3.2}\textit {Handheld Display}}{13}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}\textit {Spatial Display}}{14}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}Model Tiga Dimensi (3D)}{15}{section.2.4}
+\contentsline {section}{\numberline {2.5}Aplikasi Komputer Berbasis Web (\textit {Rich Internet Application})}{15}{section.2.5}
+\contentsline {section}{\numberline {2.6}Adobe Flash \textit {Platform}}{16}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Adobe Flash}{17}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}Adobe Flex}{17}{subsection.2.6.2}
+\contentsline {subsection}{\numberline {2.6.3}ActionScript}{18}{subsection.2.6.3}
+\contentsline {section}{\numberline {2.7}\textit {Library} Pendukung Augmented Reality Pada Platform Flash}{19}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}FLARToolKit}{19}{subsection.2.7.1}
+\contentsline {subsubsection}{\numberline {2.7.1.1}Mengambil Video dari \textit {Webcam}}{20}{subsubsection.2.7.1.1}
+\contentsline {subsubsection}{\numberline {2.7.1.2}Binarisasi Citra Masukan (\textit {Thresholding})}{21}{subsubsection.2.7.1.2}
+\contentsline {subsubsection}{\numberline {2.7.1.3}Memberi Penanda (\textit {Labeling})}{22}{subsubsection.2.7.1.3}
+\contentsline {subsubsection}{\numberline {2.7.1.4}Deteksi Area Persegi (\textit {Marker Outline Detection})}{23}{subsubsection.2.7.1.4}
+\contentsline {subsubsection}{\numberline {2.7.1.5}Pencocokan Pola}{23}{subsubsection.2.7.1.5}
+\contentsline {subsubsection}{\numberline {2.7.1.6}Menghitung Transformasi Matriks}{24}{subsubsection.2.7.1.6}
+\contentsline {subsubsection}{\numberline {2.7.1.7}Me-\textit {render} Objek 3D}{24}{subsubsection.2.7.1.7}
+\contentsline {subsection}{\numberline {2.7.2}Papervision3D}{24}{subsection.2.7.2}
+\contentsline {subsection}{\numberline {2.7.3}FLARManager}{25}{subsection.2.7.3}
+\contentsline {chapter}{\numberline {3}PERANCANGAN DAN IMPLEMENTASI}{27}{chapter.3}
+\contentsline {section}{\numberline {3.1}Deskripsi}{27}{section.3.1}
+\contentsline {section}{\numberline {3.2}Perancangan Aplikasi}{29}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Inisialisasi}{32}{subsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.1.1}Inisialisasi Model 3D}{33}{subsubsection.3.2.1.1}
+\contentsline {subsubsection}{\numberline {3.2.1.2}Inisialisasi FLARManager}{34}{subsubsection.3.2.1.2}
+\contentsline {subsubsection}{\numberline {3.2.1.3}Inisialisasi \textit {Engine} 3D}{34}{subsubsection.3.2.1.3}
+\contentsline {subsection}{\numberline {3.2.2}\textit {Tracking} Marker}{34}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}\textit {Rendering} objek 3D}{35}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}Implementasi Perancangan Aplikasi}{35}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Inisialisasi}{35}{subsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.1.1}Inisialisasi Model 3D}{36}{subsubsection.3.3.1.1}
+\contentsline {subsubsection}{\numberline {3.3.1.2}Inisialisasi FLARManager}{37}{subsubsection.3.3.1.2}
+\contentsline {subsection}{\numberline {3.3.2}\textit {Tracking} Marker}{38}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}\textit {Rendering} Objek 3D}{40}{subsection.3.3.3}
+\contentsline {chapter}{\numberline {4}PENGUJIAN DAN ANALISA}{42}{chapter.4}
+\contentsline {section}{\numberline {4.1}Analisa \textit {Frame per Second (FPS)}}{43}{section.4.1}
+\contentsline {chapter}{\numberline {5}KESIMPULAN DAN SARAN}{45}{chapter.5}
+\contentsline {section}{\numberline {5.1}Kesimpulan}{45}{section.5.1}
+\contentsline {section}{\numberline {5.2}Saran}{45}{section.5.2}
+\contentsline {chapter}{Daftar Pustaka}{48}{chapter*.34}
+\contentsline {chapter}{\numberline {A}\textit {Listing Source Code} Aplikasi}{49}{appendix.A}
+\contentsline {section}{\numberline {A.1}AR3DV.as}{49}{section.A.1}
+\contentsline {section}{\numberline {A.2}AR3DVModelContainer.as}{54}{section.A.2}
+\contentsline {section}{\numberline {A.3}AR3DVModel.as}{58}{section.A.3}
+\contentsline {section}{\numberline {A.4}AR3DVModelEvent.as}{61}{section.A.4}

@@ -1,0 +1,34 @@
+\select@language {bahasa}
+\select@language {bahasa}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Mixed Reality\relax }}{8}{figure.caption.7}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Pembentukan citra untuk display \textit {augmented reality}\relax }}{8}{figure.caption.8}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Diagram \textit {Opaque} HMD\relax }}{10}{figure.caption.9}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Contoh \textit {Opaque} HMD\relax }}{11}{figure.caption.10}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Diagram \textit {see-trough} HMD\relax }}{11}{figure.caption.11}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Contoh \textit {see-through} HMD, dibuat oleh Hughes Electronics\relax }}{12}{figure.caption.12}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Ilustrasi penggunaan dua jenis perangkat HMD yang digunakan untuk menampilkan data dan informasi tambahan\relax }}{12}{figure.caption.13}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Diagram sederhana \textit {virtual retina display}\relax }}{13}{figure.caption.14}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Contoh augmented reality dengan \textit {handphone}\relax }}{13}{figure.caption.15}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Contoh \textit {Screen-Based Video See-Through Displays} \relax }}{14}{figure.caption.16}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Diagram Kompilasi Flex\relax }}{18}{figure.caption.17}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Mengambil citra dari \textit {webcam}\relax }}{21}{figure.caption.18}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Perbandingan antara citra yang ideal dengan citra yang disebabkan oleh faktor distorsi\relax }}{21}{figure.caption.19}
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Thresholding\relax }}{22}{figure.caption.20}
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Setiap area putih ditandai dengan warna yang berbeda.\relax }}{22}{figure.caption.21}
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Mencari area persegi (Marker Outline Detection)\relax }}{23}{figure.caption.22}
+\contentsline {figure}{\numberline {2.17}{\ignorespaces Spesifikasi pola marker\relax }}{24}{figure.caption.23}
+\contentsline {figure}{\numberline {2.18}{\ignorespaces Render objek 3D\relax }}{25}{figure.caption.24}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Gambaran aplikasi \textit {viewer} objek 3D virtual dengan \textit {Augmented Reality}\relax }}{28}{figure.caption.25}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Gambaran sistem secara umum\relax }}{29}{figure.caption.26}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagram alir aplikasi secara umum\relax }}{30}{figure.caption.27}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Diagram kelas aplikasi\relax }}{32}{figure.caption.28}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces \textit {Sequence diagram} inisialisasi\relax }}{33}{figure.caption.29}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Proses kompilasi, \textit {deploy} dan akses aplikasi\relax }}{41}{figure.caption.30}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Hasil pengujian\relax }}{43}{figure.caption.31}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Hasil pengujian dengan statistik\relax }}{44}{figure.caption.32}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
