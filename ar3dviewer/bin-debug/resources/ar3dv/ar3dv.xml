@@ -1,0 +1,22 @@
+<!-- this file specifies configurations for AR3DV. -->
+<ar3dv>
+<models >
+		<!-- Simple Model -->
+		<model enable="true" name="scout" type="DAE" pattern="0" source_dir="resources/models/dae/scout/" source="scout.dae" scale="0.5">
+			<rotation x="90" y="0" z="90" />
+		</model>
+		<model enable="true" name="monas" type="KMZ" pattern="1" source_dir="resources/models/kmz/" source="monas.kmz" scale="0.5">
+			<rotation x="90" y="0" z="90" />
+		</model>
+		<model enable="true" name="EiffelTower" type="KMZ" pattern="2" source_dir="resources/models/kmz/" source="EiffelTower.kmz" scale="0.01">
+			<rotation x="90" y="0" z="0" />
+		</model>
+		<model enable="false" name="EiffelDae" type="DAE" pattern="2" source_dir="resources/models/dae/EiffelTower/models/" source="model.dae" scale="0.1">
+			<rotation x="0" y="0" z="0" />
+		</model>
+		<!-- Moderate Model -->
+		<model enable="false" name="mustang_gt500kr" type="KMZ" pattern="8" source_dir="resources/models/kmz/" source="mustang_gt500kr.kmz" scale="10">
+			<rotation x="90" y="0" z="90" />
+		</model>
+</models>
+</ar3dv>

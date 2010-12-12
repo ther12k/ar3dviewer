@@ -1,0 +1,303 @@
+\documentclass[12pt,a4paper,pdftex,final,oneside,titlepage]{book}
+\usepackage[pdftex]{graphicx,color}
+\usepackage{graphicx}
+\usepackage[left=4cm,top=3cm,right=3cm,bottom=3cm,includeheadfoot]{geometry} %untuk mengatur margin
+\usepackage[pdftex]{hyperref}
+\usepackage{lscape}
+%\begin{landscape} untuk awal landsacpe
+%landscape content
+%\end{landscape} untuk akhir landscape
+\usepackage{longtable}
+\usepackage{setspace} %untuk mengatur spasi, pilihan: \doublespacing \singlespacing atau \onehalfspacing   
+\usepackage[bahasa]{babel}
+\selectlanguage{bahasa}
+\usepackage{fancyhdr,lastpage}
+%\usepackage[Lenny]{fncychap}
+%\usepackage[Sonny]{fncychap}
+\usepackage{pstricks}
+\usepackage{listings} %listing program
+\usepackage{appendix}
+\usepackage{subfig} %sub figure
+\usepackage{sidecap} %side caption
+\usepackage{ulem} %striketrough
+%==========================================================================================================
+% Bagian input data untuk keterangan file PDF yang dihasilkan
+%========================================================================================================== 
+\pdfinfo{
+/Author (Rizky Zulkarnaen)
+/CreationDate (D:20100602300000) % D:YYYYMMDDhhmmss (diisi dengan tanggal pembuatan skripsi)
+/ModDate (D:20100602300000) % diisi dengan tanggal modifikasi skripsi
+/Creator (LaTeX)
+/Producer (pdfLaTeX)
+/Title (TA_AR) % diisi dengan nama file skripsi
+/Subject (Web-based Interactive 3D Model Viewer With Augmented Reality) % diisi dengan judul skripsi
+/Keywords (augmented reality, computer vision, 3D) % diisi dengan kata-kata kunci isi skripsi
+}
+
+%==========================================================================================================
+% Bagian pengaturan hyperref
+%========================================================================================================== 
+\hypersetup{
+pdftitle={Web-based Interactive 3D Model Viewer With Augmented Reality}, % diisi dengan judul akhir skripsi
+pdfauthor={Rizky Zulkarnaen}, % diisi dengan nama penulis skripsi
+pdfkeywords={augmented reality computer vision 3D}, % diisi dengan kata-kata kunci dari isi skripsi
+bookmarksnumbered,
+pdfstartview={FitH},
+	citecolor = black,
+	linkcolor=black,
+  colorlinks
+}
+
+%==========================================================================================================
+% Koleksi pemenggalan kata, isi bagian ini bisa ditambah jika Anda mendapati kata yang salah pemenggalannya 
+%==========================================================================================================
+\hyphenation{client}
+
+%==========================================================================================================
+% Bagian pengaturan paragraf 
+%==========================================================================================================
+\setlength{\parindent}{0in} % jika awal paragraf ingin dibuat menjorok ke dalam, ganti angka 0 nya. 
+\setlength{\parskip}{6pt plus1pt minus1pt}
+\newcommand{\marginal}[1]{\leavevmode\marginpar{\color{cyan}\footnotesize\raggedright#1\par}} 
+\onehalfspacing
+%==========================================================================================================
+% Bagian pengaturan Fancy Header
+%==========================================================================================================
+\setlength{\headheight}{15pt}
+
+%==========================================================================================================
+% BAGIAN ISI DOKUMEN 
+%==========================================================================================================
+\begin{document}  
+
+%==========================================================================================================
+% Bagian pembuatan halaman judul 
+%==========================================================================================================
+\pagestyle{empty} 
+	\begin{titlepage} 
+		\begin{center} 
+		{\Large\textbf{Tugas Akhir}}\\
+		\par
+		\vspace{2cm}
+		\textbf{\Large Web-based Interactive 3D Model Viewer With Augmented Reality} % diisi dengan judul skripsi
+		\vspace{0.5cm} \\
+		oleh :\\[0.4cm] 
+		{\large\underline{Rizky Zulkarnaen}}\\% ganti Nama Penulis dengan nama Anda sendiri
+		$050402056$ \\% ganti NIM
+		\end{center}
+		
+		\par
+		\vfill
+		
+		\begin{figure}[h]
+			\begin{center}
+				\includegraphics[width=4.2cm]{./images/logoUSU} % isi dengan nama file logo
+			\end{center}
+        \end{figure}
+        
+        \vfill 
+        
+      \begin{center}
+      {\bf \large DEPARTEMEN TEKNIK ELEKTRO}\\[0.4cm] 
+      {\bf \large FAKULTAS TEKNIK}\\[0.4cm] 
+      {\bf \large UNIVERSITAS SUMATERA UTARA}\\[0.4cm] 
+      {\bf \large MEDAN}\\[0.4cm] 
+      {\bf \large 2010}
+      \end{center}
+      
+   \end{titlepage} 
+
+%==========================================================================================================
+% Bagian pembuatan halaman pengesahan skripsi 
+%==========================================================================================================
+\thispagestyle{empty} 
+\begin{center}{%\fontfamily{phv}\selectfont
+
+\textbf{\large Web-based Interactive 3D Model Viewer With Augmented Reality}\\[1cm] 
+
+\par 
+\vspace{0.4cm} 
+oleh : 
+\\[1cm] 
+{\large\underline{Rizky Zulkarnaen}}\\ 
+$050402056$
+} 
+\vspace{1.4cm} 
+
+This final task proposed to complete requirement bachelor degree in technique \\[0.2cm] 
+
+Agreed by:\\ 
+Pembimbing\\[2.2cm] 
+\textbf{\bfseries \underline{Ori Novanda, ST}}\\[0.2cm] 
+NIP:\\[0.4cm]
+Known by:\\ 
+Pelaksana Harian Ketua Departemen Teknik Elektro\\[2.2cm] 
+\textbf{\bfseries \underline{Prof. Dr. Ir. Usman S. Baafai}}\\[0.2cm] 
+NIP:19461022197302001\\ 
+
+\end{center} 
+%========================================================================================================== 
+% Bagian pengaturan header dan footer
+%========================================================================================================== 
+\pagestyle{fancy}
+\lhead{} \chead{} \rhead{\thepage}
+\lfoot{} \cfoot{} \rfoot{}
+\renewcommand\headrulewidth{0pt}
+\renewcommand\footrulewidth{0pt}
+
+%==========================================================================================================
+% ISI SKRIPSI 
+%==========================================================================================================
+\pagenumbering{roman}
+\setcounter{tocdepth}{5} 
+\setcounter{secnumdepth}{3} %ditambahkan agar perintah \subsubsection memiliki angka
+
+%==========================================================================================================
+%ABSTRAK
+%==========================================================================================================
+
+\chapter*{\centering Abstract}
+\thispagestyle{empty}
+\addcontentsline{toc}{chapter}{Abstrak} 
+Today, it has become very popular to represent 3D CG models onto the screen of a workstation or personal computer. In almost all software that displays 3D models, users can control their viewpoint of projection with pointing devices such as a mouse or trackball. However it is not intuitive to control the viewpoint with such devices, because there is an insufficient degree of freedom. Although locating viewpoint needs 6 degrees of freedom (3 degrees in position, and 3 degrees in direction), off-the-shelf pointing devices are basically two-dimensional controllers. We propose a 3D model viewer with a real-time marker tracking system. This system provides an easy method to make observations of 3D models from any direction and to any scale that users may choose. 
+
+\vspace*{2cm}
+
+\textbf{Kata Kunci : augmented reality, computer vision, image recognition}
+
+%==========================================================================================================
+% AWAL KATA PENGANTAR  
+%==========================================================================================================
+\chapter*{KATA PENGANTAR}
+\addcontentsline{toc}{chapter}{Kata Pengantar} 
+
+Puji dan syukur kepada Allah SWT penulis ucapkan, karena hanya dengan kehendakNya penulis dapat menyelesaikan Tugas Akhir ini, yang berjudul "Perancangan Aplikasi Viewer Model 3D Interaktif Berbasis Web dengan Teknologi Augmented Reality". Tak lupa pula shalawat dan salam kepada Junjungan kita Nabi Besar Muhammad SAW yang telah membimbing kita kepada Islam. Di samping itu, penulis mengucapkan terima kasih yang sebesar-besarnya kepada:
+
+\begin{enumerate}
+\item Ayahanda Zulkifli. Y dan Ibunda Nurmawati yang telah membesarkan dan memberikan kasih sayang yang tulus kepada penulis.
+\item 2.
+\item Bapak Ori Novanda ST, MT, selaku dosen pembimbing penulis yang telah sangat banyak membantu dalam penulisan Tugas Akhir ini.
+\item Bapak Ir. Riswan Dinzi selaku dosen wali penulis, atas bimbingannya selama penulis kuliah di Departemen Teknik Elektro, Fakultas Teknik, Universitas Sumatera Utara.
+\item Bapak Prof. Dr. Ir. Usman S. Baafai dan Bapak Rahmad Fauzi, ST, MT, selaku Pelaksana Harian Ketua dan Sekretaris Departemen Teknik Elektro, Fakultas Teknik, Universitas Sumatera Utara.
+\item Seluruh staf pengajar dan pegawai Departemen Teknik Elektro Fakultas Teknik Universitas Sumatera Utara.
+\item Asisten Laboratorium Sistem Pengaturan dan Komputer, Salman Alfarisi dan Fachrurozi Nasution, yang menemani dan banyak membantu penulis dalam pengerjaan Tugas Akhir ini.
+\item Teman-teman stambuk 2005,  dan teman-teman yang belum disebut namanya, yang selama ini menjadi teman diskusi di kampus.
+
+\end{enumerate}
+Berbagai usaha telah penulis lakukan demi terselesaikannya Tugas Akhir ini dengan baik, tetapi penulis menyadari akan kekurangan dan keterbatasan penulis. Oleh karena itu, saran dan kritik dengan tujuan menyempurnakan dan mengembangkan kajian dalam bidang ini sangat penulis harapkan.
+
+Akhir kata penulis berharap agar Tugas Akhir ini dapat bermanfaat bagi pembaca dan penulis.
+
+\vspace*{2cm} 
+\begin{flushright} 
+Medan,\hspace{0.2cm} Juni 2010 \hspace{1cm} \\ % sesuaikan dengan tempat dan tanggal penulisan skripsi 
+Penulis,\hspace{2.2cm}
+\par 
+\vspace*{1cm} 
+\par \underline{Rizky Zulkarnaen}\\%\hspace{0.5cm}
+NIM:$050402056$ \hspace{0.6cm} \par
+\end{flushright} 
+%==========================================================================================================
+% AKHIR KATA PENGANTAR 
+%==========================================================================================================
+
+\clearpage
+\addcontentsline{toc}{chapter}{List of Contents} 
+\tableofcontents  %perintah untuk menampilkan daftar isi
+
+\clearpage
+\addcontentsline{toc}{chapter}{List of Tables} 
+\listoftables %perintah untuk menampilkan daftar tabel 
+
+\clearpage
+\addcontentsline{toc}{chapter}{List of Figures} 
+\listoffigures %perintah untuk menampilkan daftar gambar  
+%==========================================================================================================
+% MULAI BAB I
+%==========================================================================================================
+\chapter{INTRODUCTION} %JUDUL BAB 
+\label{chap:pendahuluan} 
+\pagenumbering{arabic} 
+
+\section{Background} %Judul subbab 
+\label{sec:latar_belakang} 
+%isi subbab latar belakang
+Modelling 3 dimension object (3 D) very needed in every application, whether for simulation or model introduction from real object which difficult to presence in physics, because of time and space limit. The model of real object able to presence in virtual which can be display through screen or computer, thus modeling an object easy to do with low cost. Many of fields need modeling of 3D virtual object, such as body organ modeling helpfull in medical, building modeling, modeling product which to sell, and so on.
+
+Modeling virtual object need good interaction with user to earn clear viewpoint from the object. Some of 3D modeling use pointer, such as keyboard or mouse that still lack in give degree of freedom viewpoint from the 3D model. Augmented reality is a merger concept between virtual reality and world reality. There by, 2 dimension virtual objects (2D) or 3 dimension (3D) like real and unite to the real world. In augmented reality technology, user able to see real world surround with virtual object added that comes from computer. With augmented reality technology, 3D model presentation able to presence more interactive. Object in the real world can be used as tracker for interaction needed in 3D virtual model, so helpful in appearance that virtual object.
+
+Computer application (software) which can show 3D model, usually need installation process in order to operated, and sometimes only operate in specific platform. The development of web technology enable many computer's applications make in web based. Applicatons with web based is very easy to access, moreover it can be operate in various platform. Application with difficult specification through specific web plugin can be made and can be access only from web browser. Requirement of web based application will ever increasing, because of user's application like to use easy application and without need of installation.  Likewise, with application for viewer model 3D, web based application viewer model 3D will facilitate people who want to look 3D model in an interactive manner through browser without need of application installation or may be for companies, which want to show their product in 3D model as interactively to the consumer.
+
+\section{Writing Purpose}
+\label{sec:tujuan_penulisan}
+The aim of this research is to design an application that facilitate object 3D presentation (viewer model 3D), especially interaction with applying augmented reality technology. Application that will be made is web based with Rich Internet Application (RIA) concept, in this case is used technology from Adobe Flex that have integration to the web, so the application can be access through web browser and certainly can be access in various platform. This application also use database to save 3D object and show it again.
+
+\section{Tinjauan Pustaka}
+\label{sec:tinjauan_pustaka}
+tinjauan pustaka
+%==============================================================================================
+% Subbab Rumusan Masalah
+%==============================================================================================
+\section{Formulation of Problem} %Judul subbab
+\label{rumusan}
+from the background that have explain above, can be defined some problem, that is:\\
+\begin{enumerate}
+\item How augmented reality technology applied to make interactive viewer model 3D.
+\item Design web based application that able to save 3D object into a database and then show again with Rich Internet Application (RIA) concept.
+\end{enumerate}
+
+%==============================================================================================
+% Subbab Batasan Masalah
+%==============================================================================================
+\section{Limit of Problem} %Judul subbab
+\label{batasan}
+To avoid broader investigation in this study, it has limited in some cases:\\
+\begin{enumerate}
+\item Study augmented reality concept in summary and supporting theory in design viewer 3D application with augmented reality.
+\item Not study the making of 3D object, but only study how to show the 3D object with augmented reality support.
+\item The making of the applicaton is web based with utilize Adobe Flex technology. That application able to save 3D object that being input by user, determine marker for 3D object, then show the 3D object with augmented reality technology.
+\item Not study detail database system that use to save 3D data object.
+\end{enumerate}
+
+\section{Research Methodology}
+\label{sec:metodologi_penelitian}
+Research Methodology
+
+\section{Writing Systematic}
+\label{sec:sistematika_penulisan}
+The writing of this final task, presence with writing systematic:
+\par\noindent
+\begin{longtable}{llp{11cm}}
+CHAPTER I & : & INTRODUCTION\\
+& & This chapter present view of all matter that studied in this final task, study about background, research aim, limit of problem, research method, and writing systematic.\\
+CHAPTER II & : & DASAR TEORI\\
+& & This chapter study augmented reality, supporting theories of augmented reality especially augmented reality with use marker and also Rich Internet Application concept that use Adobe Flex.\\
+CHAPTER III & : & APPLICATION DESIGN AND IMPLEMENTATION\\
+& & This chapter study about the design application, the use of Rich Internet Application (RIA) technology that is Adobe Flex and also library for augmented reality.\\
+CHAPTER IV & : & TESTING AND ANALYSIS\\
+& & This chapter study about testing and analysis of the problem.\\
+
+CHAPTER V & : & CONCLUSION AND SUGGESTION\\
+& & This chapter content conclusion and suggestion from the application that have designed.
+
+\end{longtable}
+%==========================================================================================================
+%Penulisan BAB di file yang berbeda
+%==========================================================================================================
+%\include{pendahuluan}
+\include{bab_2}
+\include{bab_3}
+%\include{bab_4}
+%\include{bab_5}
+
+%==========================================================================================================
+% Bagian daftar pustaka 
+%==========================================================================================================
+%\nocite{*}
+\renewcommand{\bibname}{Daftar Pustaka}
+\bibliographystyle{ieeetr} 
+\bibliography{daftarpustaka}
+\addcontentsline{toc}{chapter}{Daftar Pustaka} 
+
+\end{document}
+

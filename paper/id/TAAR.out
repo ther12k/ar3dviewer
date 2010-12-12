@@ -1,0 +1,65 @@
+\BOOKMARK [0][-]{chapter*.2}{Abstrak}{}
+\BOOKMARK [0][-]{chapter*.3}{Kata Pengantar}{}
+\BOOKMARK [0][-]{Item.8}{Daftar Isi}{}
+\BOOKMARK [0][-]{chapter*.4}{Daftar Tabel}{}
+\BOOKMARK [0][-]{chapter*.5}{Daftar Gambar}{}
+\BOOKMARK [0][-]{chapter.1}{1 PENDAHULUAN}{}
+\BOOKMARK [1][-]{section.1.1}{1.1 Latar Belakang}{chapter.1}
+\BOOKMARK [1][-]{section.1.2}{1.2 Tujuan Penulisan}{chapter.1}
+\BOOKMARK [1][-]{section.1.3}{1.3 Rumusan Masalah}{chapter.1}
+\BOOKMARK [1][-]{section.1.4}{1.4 Batasan Masalah}{chapter.1}
+\BOOKMARK [1][-]{section.1.5}{1.5 Metodologi Penulisan}{chapter.1}
+\BOOKMARK [1][-]{section.1.6}{1.6 Sistematika Penulisan}{chapter.1}
+\BOOKMARK [0][-]{chapter.2}{2 DASAR TEORI}{}
+\BOOKMARK [1][-]{section.2.1}{2.1 Augmented Reality}{chapter.2}
+\BOOKMARK [1][-]{section.2.2}{2.2 Mixed Reality}{chapter.2}
+\BOOKMARK [1][-]{section.2.3}{2.3 Teknik Display Augmented Reality}{chapter.2}
+\BOOKMARK [2][-]{subsection.2.3.1}{2.3.1 Head-Attached Display}{section.2.3}
+\BOOKMARK [3][-]{subsubsection.2.3.1.1}{2.3.1.1 Head-Mounted Display}{subsection.2.3.1}
+\BOOKMARK [3][-]{subsubsection.2.3.1.2}{2.3.1.2 Head-Mounted Projectors}{subsection.2.3.1}
+\BOOKMARK [3][-]{subsubsection.2.3.1.3}{2.3.1.3 Virtual Retina Display}{subsection.2.3.1}
+\BOOKMARK [2][-]{subsection.2.3.2}{2.3.2 Handheld Display}{section.2.3}
+\BOOKMARK [2][-]{subsection.2.3.3}{2.3.3 Spatial Display}{section.2.3}
+\BOOKMARK [1][-]{section.2.4}{2.4 Model Tiga Dimensi \(3D\)}{chapter.2}
+\BOOKMARK [1][-]{section.2.5}{2.5 Aplikasi Komputer Berbasis Web \(Rich Internet Application\)}{chapter.2}
+\BOOKMARK [1][-]{section.2.6}{2.6 Adobe Flash Platform}{chapter.2}
+\BOOKMARK [2][-]{subsection.2.6.1}{2.6.1 Adobe Flash}{section.2.6}
+\BOOKMARK [2][-]{subsection.2.6.2}{2.6.2 Adobe Flex}{section.2.6}
+\BOOKMARK [2][-]{subsection.2.6.3}{2.6.3 ActionScript}{section.2.6}
+\BOOKMARK [1][-]{section.2.7}{2.7 Library Pendukung Augmented Reality Pada Platform Flash}{chapter.2}
+\BOOKMARK [2][-]{subsection.2.7.1}{2.7.1 FLARToolKit}{section.2.7}
+\BOOKMARK [3][-]{subsubsection.2.7.1.1}{2.7.1.1 Mengambil Video dari Webcam}{subsection.2.7.1}
+\BOOKMARK [3][-]{subsubsection.2.7.1.2}{2.7.1.2 Binarisasi Citra Masukan \(Thresholding\)}{subsection.2.7.1}
+\BOOKMARK [3][-]{subsubsection.2.7.1.3}{2.7.1.3 Memberi Penanda \(Labeling\)}{subsection.2.7.1}
+\BOOKMARK [3][-]{subsubsection.2.7.1.4}{2.7.1.4 Deteksi Area Persegi \(Marker Outline Detection\)}{subsection.2.7.1}
+\BOOKMARK [3][-]{subsubsection.2.7.1.5}{2.7.1.5 Pencocokan Pola}{subsection.2.7.1}
+\BOOKMARK [3][-]{subsubsection.2.7.1.6}{2.7.1.6 Menghitung Transformasi Matriks}{subsection.2.7.1}
+\BOOKMARK [3][-]{subsubsection.2.7.1.7}{2.7.1.7 Me-render Objek 3D}{subsection.2.7.1}
+\BOOKMARK [2][-]{subsection.2.7.2}{2.7.2 Papervision3D}{section.2.7}
+\BOOKMARK [2][-]{subsection.2.7.3}{2.7.3 FLARManager}{section.2.7}
+\BOOKMARK [0][-]{chapter.3}{3 PERANCANGAN DAN IMPLEMENTASI}{}
+\BOOKMARK [1][-]{section.3.1}{3.1 Deskripsi}{chapter.3}
+\BOOKMARK [1][-]{section.3.2}{3.2 Perancangan Aplikasi}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.2.1}{3.2.1 Inisialisasi}{section.3.2}
+\BOOKMARK [3][-]{subsubsection.3.2.1.1}{3.2.1.1 Inisialisasi Model 3D}{subsection.3.2.1}
+\BOOKMARK [3][-]{subsubsection.3.2.1.2}{3.2.1.2 Inisialisasi FLARManager}{subsection.3.2.1}
+\BOOKMARK [3][-]{subsubsection.3.2.1.3}{3.2.1.3 Inisialisasi Engine 3D}{subsection.3.2.1}
+\BOOKMARK [2][-]{subsection.3.2.2}{3.2.2 Tracking Marker}{section.3.2}
+\BOOKMARK [2][-]{subsection.3.2.3}{3.2.3 Rendering objek 3D}{section.3.2}
+\BOOKMARK [1][-]{section.3.3}{3.3 Implementasi Perancangan Aplikasi}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.3.1}{3.3.1 Inisialisasi}{section.3.3}
+\BOOKMARK [3][-]{subsubsection.3.3.1.1}{3.3.1.1 Inisialisasi Model 3D}{subsection.3.3.1}
+\BOOKMARK [3][-]{subsubsection.3.3.1.2}{3.3.1.2 Inisialisasi FLARManager}{subsection.3.3.1}
+\BOOKMARK [2][-]{subsection.3.3.2}{3.3.2 Tracking Marker}{section.3.3}
+\BOOKMARK [2][-]{subsection.3.3.3}{3.3.3 Rendering Objek 3D}{section.3.3}
+\BOOKMARK [0][-]{chapter.4}{4 PENGUJIAN DAN ANALISA}{}
+\BOOKMARK [1][-]{section.4.1}{4.1 Analisa Frame per Second \(FPS\)}{chapter.4}
+\BOOKMARK [0][-]{chapter.5}{5 KESIMPULAN DAN SARAN}{}
+\BOOKMARK [1][-]{section.5.1}{5.1 Kesimpulan}{chapter.5}
+\BOOKMARK [1][-]{section.5.2}{5.2 Saran}{chapter.5}
+\BOOKMARK [0][-]{chapter*.34}{Daftar Pustaka}{}
+\BOOKMARK [0][-]{appendix.A}{A Listing Source Code Aplikasi}{}
+\BOOKMARK [1][-]{section.A.1}{A.1 AR3DV.as}{appendix.A}
+\BOOKMARK [1][-]{section.A.2}{A.2 AR3DVModelContainer.as}{appendix.A}
+\BOOKMARK [1][-]{section.A.3}{A.3 AR3DVModel.as}{appendix.A}
+\BOOKMARK [1][-]{section.A.4}{A.4 AR3DVModelEvent.as}{appendix.A}

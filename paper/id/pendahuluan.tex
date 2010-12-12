@@ -1,0 +1,78 @@
+\chapter{PENDAHULUAN} %JUDUL BAB 
+\label{chap:pendahuluan} 
+\pagenumbering{arabic} 
+
+\section{Latar Belakang} %Judul subbab 
+\label{sec:latar_belakang} 
+%isi subbab latar belakang
+Pemodelan objek tiga dimensi (3D) sangat diperlukan dalam berbagai aplikasi, baik untuk simulasi maupun untuk pengenalan model dari objek nyata yang sulit disajikan secara fisik dikarenakan keterbatasan ruang dan waktu. Model suatu objek nyata dapat disajikan secara virtual yang dapat dilihat melalui suatu layar atau \textit{display} dengan bantuan komputer sehingga pemodelan suatu objek mudah dilakukan dengan biaya yang murah. Banyak bidang yang memerlukan pemodelan objek virtual 3D ini, misalnya pemodelan organ tubuh yang bermanfaat dalam dunia kedokteran, pemodelan bangunan, pemodelan suatu produk yang akan dijual, dan lain sebagainya.
+
+Pemodelan objek virtual tersebut memerlukan interaksi yang baik dengan pengguna untuk mendapatkan sudut pandang yang jelas dari objek tersebut. Beberapa \textit{software} pemodelan 3D menggunakan \textit{pointer} seperti \textit{keyboard} ataupun \textit{mouse} yang dirasakan masih kurang dalam memberikan derajat kebebasan sudut pandang dari model 3D tersebut. \textit{Augmented Reality} merupakan suatu konsep perpaduan antara \textit{"virtual reality"} dengan \textit{"world reality"}. Sehingga objek-objek virtual 2 Dimensi (2D) atau 3 Dimensi (3D) seolah-olah terlihat nyata dan menyatu dengan dunia nyata. Pada teknologi \textit{Augmented Reality}, pengguna dapat melihat dunia nyata yang ada di sekelilingnya dengan penambahan obyek virtual yang dihasilkan oleh komputer.  Dengan teknologi \textit{Augmented Reality}, penyajian model 3D dapat disajikan dengan lebih interaktif. Objek di dunia nyata dapat digunakan sebagai \textit{tracker} untuk keperluan interaksi model 3D virtual sehingga memudahkan dalam menampilkan objek virtual tersebut.
+
+Aplikasi komputer (\textit{software}) yang dapat menampilkan model 3D \textit{viewer model 3D} biasanya memerlukan proses instalasi agar dapat dijalankan, dan terkadang hanya dapat berjalan di platform tertentu saja. Dengan berkembangnya teknologi \textit{web}, banyak aplikasi komputer yang dibuat berbasis \textit{web}. Aplikasi yang berbasis \textit{web} sangat mudah diakses, bahkan dapat berjalan di berbagai platform. Dengan \textit{web plug-in} tertentu, aplikasi yang tergolong rumit pun bisa dibuat dan dapat diakses hanya lewat \textit{web browser}. Kebutuhan akan aplikasi yang berbasis \textit{web} ini akan terus meningkat, karena pengguna menyukai aplikasi yang mudah dijalankan dan tanpa perlu instalasi. Begitu pula dengan aplikasi untuk \textit{viewer} model 3D, aplikasi \textit{viewer} 3D berbasis \textit{web} akan memudahkan seseorang yang ingin melihat model 3D secara interaktif melalui \textit{web browser} tanpa perlu instalasi aplikasi atau mungkin bagi perusahaan yang ingin menampilkan produknya dalam bentuk model 3D secara interaktif kepada konsumen.
+
+Berdasarkan uraian tersebut, penulis mengembangkan suatu aplikasi untuk menampilkan objek 3D virtual dan dapat diakses dengan mudah dari mana saja menggunakan \textit{web browser} tanpa perlu instalasi aplikasinya. Pembahasan pengembangan aplikasi ini dibuat menjadi tugas akhir yang diberi judul \textbf{``Perancangan Aplikasi \textit{Viewer} Model 3D Interaktif Berbasis \textit{Web} dengan Teknologi \textit{Augmented Reality}"}.
+
+\section{Tujuan Penulisan}
+\label{sec:tujuan_penulisan}
+Tujuan dari penulisan tugas akhir ini adalah untuk merancang suatu aplikasi yang memudahkan penyajian objek 3D (\textit{viewer} model 3D) terutama interaksinya dengan menerapkan teknologi \textit{Augmented Reality}. Aplikasi yang akan dibuat ini berbasis \textit{web} dengan konsep \textit{Rich Internet Application (RIAs)}, sehingga aplikasi tersebut dapat menampilkan objek 3D virtual melalui \textit{web browser} dan tentunya dapat diakses di  berbagai platform tanpa perlu instalasi aplikasi di sistem pengguna. 
+
+%==============================================================================================
+% Subbab Rumusan Masalah
+%==============================================================================================
+\section{Rumusan Masalah} %Judul subbab
+\label{rumusan}
+Dari latar belakang masalah, maka dapat dirumuskan beberapa permasalahan, yaitu sebagai berikut:
+\begin{enumerate}
+\item Menerapkan teknologi \textit{augmented reality} untuk membuat \textit{viewer} model 3D yang interaktif.
+\item Merancang aplikasi berbasis \textit{web} untuk \textit{viewer} objek 3D dengan konsep \textit{Rich Internet Application} (RIAs) dan teknologi \textit{Augmented Reality}.
+\end{enumerate}
+
+%==============================================================================================
+% Subbab Batasan Masalah
+%==============================================================================================
+\section{Batasan Masalah} %Judul subbab
+\label{batasan}
+Untuk menghindari pembahasan yang terlalu luas, maka penulis akan membatasi tugas akhir ini dengan hal-hal sebagai berikut:
+\begin{enumerate}
+\item Membahas secara ringkas konsep \textit{augmented reality} dan teori  yang menunjang perancangan aplikasi viewer 3D dengan \textit{augmented reality}.
+\item Tidak membahas pembuatan objek 3D nya, tetapi hanya membahas bagaimana menampilkan objek 3D tersebut dengan bantuan \textit{engine/library} 3D dan teknologi augmented reality.
+\item Pembuatan aplikasinya berbasis \textit{web} yang dapat diakses dari \textit{web browser}. Aplikasi tersebut nantinya dapat menampilkan objek 3D dan bisa berinteraksi dengan pengguna menggunakan sebuah \textit{tracker}.
+\end{enumerate}
+
+\pagebreak
+
+\section{Metodologi Penulisan}
+\label{sec:metodologi_penulisan}
+Penulisan dilakukan dalam beberapa tahapan:
+\begin{enumerate}
+\item Tahap penelitian platform dan \textit{framework}\\
+Pada tahap ini penulis meneliti platform yang akan digunakan, serta juga \textit{framework}/\textit{library} yang cocok untuk pengembangan aplikasi tersebut.
+\item Tahap perancangan aplikasi\\
+Pada tahap ini dirancang aplikasinya dengan menggunakan \textit{framework} yang telah ditentukan di tahap penelitian. 
+\item Tahap pengembangan aplikasi\\
+Pada tahap ini penulis membangun aplikasinya sesuai dengan rancangan.
+\item Tahap implementasi dan pengujian\\
+Pada tahap ini penulis mengimplementasikan aplikasi dan melakukan pengujian dari aplikasi yang telah dikembangkan.
+\end{enumerate}
+
+\section{Sistematika Penulisan}
+\label{sec:sistematika_penulisan}
+Penulisan Tugas Akhir ini disajikan dengan sistematika penulisan sebagai berikut:
+\par\noindent
+\begin{longtable}{llp{11cm}}
+BAB I & : & PENDAHULUAN\\
+& & Bab ini merupakan gambaran menyeluruh tentang apa yang diuraikan dalam Tugas Akhir ini, yaitu pembahasan tentang latar belakang, tujuan penulisan, batasan masalah, metode penulisan, dan sistematika penulisan.\\
+BAB II & : & DASAR TEORI\\
+& & Bab ini membahas tentang \textit{augmented reality}, teori-teori yang mendukung \textit{augmented reality}, teknik \textit{display} \textit{augmented reality}, konsep aplikasi berbasis \textit{web} dan juga library untuk \textit{augmented reality}.\\
+BAB III & : & PERANCANGAN DAN IMPLEMENTASI\\
+\nopagebreak
+& & Bab ini merupakan bab yang membahas perancangan aplikasinya, dimulai dari gambaran umum aplikasi desain aplikasi dan terakhir implementasi aplikasi.\\
+BAB IV & : & PENGUJIAN DAN ANALISA\\
+\nopagebreak
+& & Bab ini membahas tentang pengujian dan analisa dari aplikasi yang dibangun.\\
+BAB V & : & KESIMPULAN DAN SARAN\\
+\nopagebreak 
+& & Bab ini berisi tentang kesimpulan dan saran dari  aplikasi yang dirancang.
+
+\end{longtable}
