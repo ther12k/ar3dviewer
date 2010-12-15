@@ -1,20 +1,36 @@
 <!-- this file specifies configurations for AR3DV. -->
 <ar3dv>
 <models >
-		<!-- Simple Model -->
-		<model enable="true" name="scout" type="DAE" pattern="0" source_dir="resources/models/dae/scout/" source="scout.dae" scale="0.5">
+		<model enable="true" name="wagonDae" type="DAE" pattern="0" source_dir="resources/models/dae/" source="wagon5.DAE" scale="0.5">
 			<rotation x="90" y="0" z="90" />
 		</model>
-		<model enable="true" name="monas" type="KMZ" pattern="1" source_dir="resources/models/kmz/" source="monas.kmz" scale="0.5">
+		<model enable="false" name="wagon3ds" type="3DS" pattern="2" source_dir="resources/models/3ds/" source="wagon5.3ds" scale="0.5">
 			<rotation x="90" y="0" z="90" />
 		</model>
-		<model enable="true" name="EiffelTower" type="KMZ" pattern="2" source_dir="resources/models/kmz/" source="EiffelTower.kmz" scale="0.01">
-			<rotation x="90" y="0" z="0" />
+		<model enable="true" name="scout" type="DAE" pattern="1" source_dir="resources/models/dae/scout/" source="scout.dae" scale="0.5">
+			<rotation x="90" y="0" z="90" />
 		</model>
-		<model enable="false" name="EiffelDae" type="DAE" pattern="2" source_dir="resources/models/dae/EiffelTower/models/" source="model.dae" scale="0.1">
-			<rotation x="0" y="0" z="0" />
+		<model enable="false" name="monas" type="KMZ" pattern="2" source_dir="resources/models/kmz/" source="monas.kmz" scale="0.5">
+			<rotation x="90" y="0" z="90" />
 		</model>
-		<!-- Moderate Model -->
+		<model enable="false" name="EiffelTower" type="KMZ" pattern="3" source_dir="resources/models/kmz/" source="EiffelTower.kmz" scale="0.01">
+			<rotation x="90" y="0" z="90" />
+		</model>
+		<model enable="false" name="Tajmahal1" type="KMZ" pattern="4" source_dir="resources/models/kmz/" source="tajmahal.kmz" scale="0.01">
+			<rotation x="90" y="0" z="90" />
+		</model>
+		<model enable="false" name="Tajmahal2" type="DAE" pattern="5" source_dir="resources/models/dae/tajmahal/models/" source="model.dae" scale="0.01">
+			<rotation x="90" y="0" z="90" />
+		</model>
+		<model enable="false" name="Tajmahal2" type="KMZ" pattern="4" source_dir="resources/models/kmz/" source="tajmahal2.kmz" scale="0.5">
+			<rotation x="90" y="0" z="90" />
+		</model>
+		<model enable="false" name="airport" type="3DS" pattern="8" source_dir="resources/models/3ds/airport/" source="airport.3ds" scale="0.5">
+			<rotation x="90" y="0" z="90" />
+		</model>
+		<model enable="false" name="EiffelDae" type="DAE" pattern="1" source_dir="resources/models/dae/EiffelTower/models/" source="model.dae" scale="0.01">
+			<rotation x="90" y="0" z="90" />
+		</model>
 		<model enable="false" name="mustang_gt500kr" type="KMZ" pattern="8" source_dir="resources/models/kmz/" source="mustang_gt500kr.kmz" scale="10">
 			<rotation x="90" y="0" z="90" />
 		</model>
