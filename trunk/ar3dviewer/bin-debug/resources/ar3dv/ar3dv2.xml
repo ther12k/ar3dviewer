@@ -1,0 +1,11 @@
+<!-- this file specifies configurations for AR3DV. -->
+<ar3dv>
+<models >
+		<model enable="true" name="EiffelTower" type="KMZ" pattern="0" source_dir="resources/models/kmz/" source="EiffelTower.kmz" scale="0.01">
+			<rotation x="90" y="0" z="90" />
+		</model>
+		<model enable="true" name="EiffelDae" type="DAE" pattern="1" source_dir="resources/models/dae/EiffelTower/models/" source="model.dae" scale="0.01">
+			<rotation x="90" y="0" z="90" />
+		</model>
+</models>
+</ar3dv>

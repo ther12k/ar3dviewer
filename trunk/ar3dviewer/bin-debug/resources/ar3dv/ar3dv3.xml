@@ -1,0 +1,17 @@
+<!-- this file specifies configurations for AR3DV. -->
+<ar3dv>
+<models >
+		<model enable="true" name="wagon3ds" type="3DS" pattern="0" source_dir="resources/models/3ds/" source="wagon5.3ds" scale="0.5">
+			<rotation x="90" y="0" z="90" />
+		</model>
+		<model enable="true" name="scout" type="DAE" pattern="1" source_dir="resources/models/dae/scout/" source="scout.dae" scale="0.5">
+			<rotation x="90" y="0" z="90" />
+		</model>
+		<model enable="true" name="monas" type="KMZ" pattern="2" source_dir="resources/models/kmz/" source="monas.kmz" scale="0.5">
+			<rotation x="90" y="0" z="90" />
+		</model>
+		<model enable="true" name="EiffelTower" type="KMZ" pattern="3" source_dir="resources/models/kmz/" source="EiffelTower.kmz" scale="0.01">
+			<rotation x="90" y="0" z="90" />
+		</model>
+</models>
+</ar3dv>
