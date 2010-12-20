@@ -1,6 +1,8 @@
 package ar3dv
 {
 	/* FLARManager Framework [http://words.transmote.com/wp/flarmanager/] */ 
+	import ar3dv.AR3DVModelContainer;
+	
 	import com.transmote.flar.FLARManager;
 	import com.transmote.flar.camera.FLARCamera_PV3D;
 	import com.transmote.flar.marker.FLARMarker;
@@ -8,6 +10,7 @@ package ar3dv
 	import com.transmote.flar.tracker.FLARToolkitManager;
 	import com.transmote.flar.utils.geom.PVGeomUtils;
 	
+	import flash.display.LoaderInfo;
 	import flash.display.Shape;
 	import flash.display.Sprite;
 	import flash.events.ErrorEvent;
@@ -17,8 +20,12 @@ package ar3dv
 	import flash.events.SecurityErrorEvent;
 	import flash.geom.Point;
 	import flash.geom.Rectangle;
+	import flash.media.Camera;
 	import flash.net.URLLoader;
 	import flash.net.URLRequest;
+	import flash.text.TextField;
+	import flash.text.TextFormat;
+	import flash.text.TextFormatAlign;
 	import flash.utils.Dictionary;
 	
 	import org.libspark.flartoolkit.support.pv3d.FLARCamera3D;
@@ -35,9 +42,6 @@ package ar3dv
 	import org.papervision3d.scenes.Scene3D;
 	import org.papervision3d.view.Viewport3D;
 	import org.papervision3d.view.stats.StatsView;
-	
-	/* model container */
-	import ar3dv.AR3DVModelContainer;
 	
 	/* Setting output */
 	[SWF(width="640", height="480", frameRate="60", backgroundColor="#FFFFFF")]
@@ -59,23 +63,68 @@ package ar3dv
 		/* Papervision PointLight3D pointer */
 		private var _pointLight3D:PointLight3D;
 		
+		private var _debugText:TextField;
+		
 		public function AR3DV() {
-			this.initModels();
+			this.initDebug();
+			this.debug("Starting ...",true);
+			this.loaderInfo.addEventListener(Event.COMPLETE, AR3DVComplete);
 		}
 		
-		private function debug(info:String):void{
+		private function AR3DVComplete(evt:Event):void{
+			var queryStrings:Object = this.loaderInfo.parameters;
+			var configFile:String = queryStrings.config;
+			if(configFile==null){
+				configFile = "resources/ar3dv/ar3dv.xml";
+			}else{
+				configFile = "resources/ar3dv/"+configFile+".xml";
+			}
+			this.initModels(configFile);
+		}
+		
+		private function initDebug():void{
+			var myFormat:TextFormat = new TextFormat();
+			myFormat.size = 15;
+			
+			_debugText = new TextField();
+			_debugText.textColor = 0x0000FF;
+			_debugText.defaultTextFormat = myFormat;	
+			
+			// Find the center co-ordinate of Stage
+			var stageCenter_x:Number = stage.stageWidth/2;
+			var stageCenter_y:Number = stage.stageHeight/2;
+			// Find the center co-ordinate of TextField
+			var textCenter_x:Number = _debugText.width/2;
+			var textCenter_y:Number = _debugText.height/2;
+			// Align TextField to Center
+			// Note: textField_txt.x and textField_txt.y is the Top Left corner of TextField
+			_debugText.x = stageCenter_x - textCenter_x;
+			_debugText.y = stageCenter_y - textCenter_y;
+			
+			addChild(_debugText);
+		}
+		
+		private function debug(info:String,useTextField:Boolean=false):void{
 			trace("[AR3DV] "+info);
+			if(useTextField){
+				_debugText.text = "[AR3DV] "+info;
+				_debugText.visible = true;
+			}
 		}
 	
 		private function onModelsLoaded(evt:Event):void{
 			this.ar3dvContainer.removeEventListener(AR3DVModelContainer.CONFIG_FILE_PARSED,this.onModelsLoaded);
-			this.debug("model selesai di-load");	
-			this.initAR();
+			this.debug("model selesai di-load");
+			if (Camera.getCamera() != null){
+				this.initAR();	
+			}else{
+				this.debug("No Camera, plz connect a webcam and refresh this page",true);
+			}
 		}
 		
-		private function initModels():void{
+		private function initModels(configFile:String):void{
 			// load model source dan konfigurasinya
-			this.ar3dvContainer = new AR3DVModelContainer("resources/ar3dv/ar3dv.xml");
+			this.ar3dvContainer = new AR3DVModelContainer(configFile);
 			this.ar3dvContainer.addEventListener(AR3DVModelContainer.CONFIG_FILE_PARSED,this.onModelsLoaded);
 		}
 		
@@ -127,6 +176,8 @@ package ar3dv
 			_renderEngine = new LazyRenderEngine(_scene3D, _camera3D, _viewport3D);
 			/* Stats View */
 			this.addChild(new StatsView(_renderEngine));
+			
+			_debugText.visible = false;
 			/* event listener untuk setiap frame */
 			this.stage.addEventListener(Event.ENTER_FRAME, this.onEnterFrame);
 		}
